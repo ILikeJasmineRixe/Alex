@@ -26,3 +26,5 @@ Getting Minecraft Server info is a pain in the ass, and while theres a few exist
 - [ ] Publish to npm
 
 ## ok thats it goodnight.
+
+*im getting my shit from https://minecraft.wiki/w/Java_Edition_protocol/Server_List_Ping*
