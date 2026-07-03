@@ -1,0 +1,54 @@
+{
+  "handshake_packet": {
+    "length_prefix": {
+      "type": "varint",
+      "value": "length of our packet body in bytes",
+      "note": "tells the server how many bytes follow"
+    },
+    "body": {
+      "packet_id": {
+        "type": "varint (fuck you)",
+        "value": "0x00",
+        "note": "identifies this as a handshake packet"
+      },
+      "protocol_version": {
+        "type": "varint (fuck you again)",
+        "value": 769,
+        "note": "1.21.4"
+      },
+      "hostnames_length": {
+        "type": "varint (fuyck you again again)",
+        "value": "byte length of hostname string",
+        "note": "number of bytes the hostname occupies, not character count"
+      },
+      "hostname": {
+        "type": "raw utf-8 bytes",
+        "value": "the server's hostname"
+      },
+      "port": {
+        "type": "2 raw bytes (unsigned short)",
+        "value": "0x63 0xDD",
+        "note": "25565"
+      },
+      "state": {
+        "type": "varint (fuck you again again again)",
+        "value": 1,
+        "note": "1 is status, 2 is login, 3 is transfer"
+      }
+    }
+  },
+  "status_request_packet": {
+    "length_prefix": {
+      "type": "varint (fuck you again again again again)",
+      "value": 1,
+      "note": "body is exactly 1 byte"
+    },
+    "body": {
+      "packet_id": {
+        "type": "varint (fuck you again again again again again)",
+        "value": "0x00",
+        "note": "tells server to send th status response"
+      }
+    }
+  }
+}
